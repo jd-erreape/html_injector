@@ -39,6 +39,20 @@ Will output:
 "<h1 class=\"test\">This is a test</h1><h2>injected</h2><h1>This is the end</h1>"
 ```
 
+You can also write the output directly to a file
+
+```ruby
+require 'html_injector'
+
+doc = HtmlInjector.new('<h1 class="test">This is a test</h1><h1>This is the end</h1>')
+res = doc.inject_and_write_file({
+    tag: 'h1',
+    css_identifier: 'test',
+    node_to_inject: 'h2',
+    code_to_inject: 'injected'
+}, './new_output.html')
+```
+
 
 ## Contributing
 
