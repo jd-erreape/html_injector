@@ -18,7 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simple usage:
+
+```ruby
+require 'html_injector'
+
+doc = HtmlInjector.new('<h1 class="test">This is a test</h1><h1>This is the end</h1>')
+res = doc.inject_code({
+    tag: 'h1',
+    css_identifier: 'test',
+    node_to_inject: 'h2',
+    code_to_inject: 'injected'
+})
+p res
+```
+
+Will output:
+
+```
+"<h1 class=\"test\">This is a test</h1><h2>injected</h2><h1>This is the end</h1>"
+```
+
 
 ## Contributing
 
