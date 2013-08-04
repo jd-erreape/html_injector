@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Juan de Dios Herrero']
   gem.email         = ['juandediosherrero@gmail.com']
   gem.description   = %q{Simple gem to inject html blocks into already existent html files}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{}
   gem.homepage      = ''
 
   gem.files         = `git ls-files`.split($\)
@@ -14,5 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = 'html_injector'
   gem.require_paths = ['lib']
   gem.version       = HtmlInjector::VERSION
-  gem.add_development_dependency 'nokogiri', '~> 1.6.0'
+  gem.add_runtime_dependency 'nokogiri', '~> 1.6.0'
 end
